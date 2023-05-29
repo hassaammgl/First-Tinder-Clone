@@ -9,7 +9,7 @@ const TinderCards = () => {
 
     useEffect(() => {
         async function fetchdata() {
-            await axios.get('http://localhost:3001/tinder/card').then((res) => {
+            await axios.get('/tinder/card').then((res) => {
                 const data = res.data.cardItem;
                 setPeople(data);
             }).catch((error) => {
